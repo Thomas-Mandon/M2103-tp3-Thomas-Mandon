@@ -22,39 +22,32 @@ String String::tolower(void) const {
 }
 
 bool String::isalpha(void) const{
-    bool result = true;
-    for (unsigned char c: *this) if (!std::isalpha(c)) result = false;
-    return result;
+    for (unsigned char c: *this) if (!std::isalpha(c)) return false;
+    return true;
 }
 bool String::isdigit(void) const{
-    bool result = true;
-    for (unsigned char c: *this) if (!std::isdigit(c)) result = false;
-    return result;
+    for (unsigned char c: *this) if (!std::isdigit(c)) return false;
+    return true;
 }
 bool String::isalnum(void) const{
-    bool result = true;
-    for (unsigned char c: *this) if (!std::isalnum(c)) result = false;
-    return result;
+    for (unsigned char c: *this) if (!std::isalnum(c)) return false;
+    return true;
 }
 bool String::isxdigit(void) const{
-    bool result = true;
-    for (unsigned char c: *this) if (!std::isxdigit(c)) result = false;
-    return result;
+    for (unsigned char c: *this) if (!std::isxdigit(c)) return false;
+    return true;
 }
 bool String::islower(void) const{
-    bool result = true;
-    for (unsigned char c: *this) if (!std::islower(c)) result = false;
-    return result;
+    for (unsigned char c: *this) if (!std::islower(c)) return false;
+    return true;
 }
 bool String::isupper(void) const{
-    bool result = true;
-    for (unsigned char c: *this) if (!std::isupper(c)) result = false;
-    return result;
+    for (unsigned char c: *this) if (!std::isupper(c)) return false;
+    return true;
 }
 bool String::isspace(void) const{
-    bool result = true;
-    for (unsigned char c: *this) if (!std::isspace(c)) result = false;
-    return result;
+    for (unsigned char c: *this) if (!std::isspace(c)) return false;
+    return true;
 }
 
 }
