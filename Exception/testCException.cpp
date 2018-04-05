@@ -1,23 +1,27 @@
 #include <iostream>
 #include "Exception.h"
 
+using namespace std;
+
+namespace {
+
 void testException(void) {
-    std::string inputLib;
+    string inputLib;
     unsigned inputCode;
     while (true){
-        std::cout << "Saisir le libellé : ";
-        getline(std::cin, inputLib);
-        if (std::cin.eof()) break;
-        std::cout << "Saisir le code    : ";
-        std::cin >> inputCode;
-        if (std::cin.eof()) break;
+        cout << "Saisir le libellé : ";
+        getline(cin, inputLib);
+        if (cin.eof()) break;
+        cout << "Saisir le code    : ";
+        cin >> inputCode;
+        if (cin.eof()) break;
         nsUtil::Exception testException (inputLib, inputCode);
         testException.display();
-        std::cin.ignore(512, '\n');
+        cin.ignore(512, '\n');
     }
 }
 
-using namespace std;
+}
 
 int main()
 {

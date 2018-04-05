@@ -1,7 +1,5 @@
 #include "Exception.h"
 #include <iostream>
-#include <exception>
-#include <string>
 
 namespace nsUtil {
 
